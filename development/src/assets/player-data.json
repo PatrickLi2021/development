@@ -1,0 +1,321 @@
+[{
+        "name": "Kylian Mbappe",
+        "price": "180.00m",
+        "position": "ST",
+        "clubbadge": "clubs/psg.jpeg",
+        "countryflag": "flags/france.jpeg",
+        "playerpic": "players/mbappe.jpeg"
+    },
+    {
+        "name": "Vinicius Junior",
+        "price": "150.00m",
+        "position": "LW",
+        "clubbadge": "clubs/real_madrid.jpeg",
+        "countryflag": "flags/brazil.jpeg",
+        "playerpic": "players/vini.jpeg"
+    },
+    {
+        "name": "Martin Ødegaard",
+        "price": "95.00m",
+        "position": "CAM",
+        "clubbadge": "clubs/arsenal.jpeg",
+        "countryflag": "flags/norway.jpeg",
+        "playerpic": "players/odegaard.jpeg"
+    },
+    {
+        "name": "Pedri",
+        "price": "90.00m",
+        "position": "CM",
+        "clubbadge": "clubs/barcelona.jpeg",
+        "countryflag": "flags/spain.jpeg",
+        "playerpic": "players/pedri.jpeg"
+    },
+    {
+        "name": "Moises Caicedo",
+        "price": "80.00m",
+        "position": "CDM",
+        "clubbadge": "clubs/chelsea.jpeg",
+        "countryflag": "flags/ecuador.jpeg",
+        "playerpic": "players/caicedo.jpeg"
+    },
+    {
+        "name": "Rafael Leao",
+        "price": "90.00m",
+        "position": "LW",
+        "clubbadge": "clubs/acmilan.jpeg",
+        "countryflag": "flags/portugal.jpeg",
+        "playerpic": "players/leao.jpeg"
+    },
+    {
+        "name": "Trent Alexander-Arnold",
+        "price": "70.00m",
+        "position": "RB",
+        "clubbadge": "clubs/liverpool.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/alexander-arnold.jpeg"
+    },
+    {
+        "name": "Eder Militao",
+        "price": "70.00m",
+        "position": "CB",
+        "clubbadge": "clubs/real_madrid.jpeg",
+        "countryflag": "flags/brazil.jpeg",
+        "playerpic": "players/militao.jpeg"
+    },
+    {
+        "name": "Alexis Mac Allister",
+        "price": "70.00m",
+        "position": "CM",
+        "clubbadge": "clubs/liverpool.jpeg",
+        "countryflag": "flags/argentina.jpeg",
+        "playerpic": "players/mac-allister.jpeg"
+    },
+    {
+        "name": "Bernardo Silva",
+        "price": "80.00m",
+        "position": "CAM",
+        "clubbadge": "clubs/mancity.jpeg",
+        "countryflag": "flags/portugal.jpeg",
+        "playerpic": "players/bernardo.jpeg"
+    },
+    {
+        "name": "Erling Haaland",
+        "price": "180.00m",
+        "position": "ST",
+        "clubbadge": "clubs/mancity.jpeg",
+        "countryflag": "flags/norway.jpeg",
+        "playerpic": "players/haaland.jpeg"
+    },
+    {
+        "name": "Bukayo Saka",
+        "price": "130.00m",
+        "position": "RW",
+        "clubbadge": "clubs/arsenal.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/saka.jpeg"
+    },
+    {
+        "name": "Lautaro Martinez",
+        "price": "110.00m",
+        "position": "ST",
+        "clubbadge": "clubs/inter.jpeg",
+        "countryflag": "flags/argentina.jpeg",
+        "playerpic": "players/lautaro.jpeg"
+    },
+    {
+        "name": "Declan Rice",
+        "price": "110.00m",
+        "position": "CDM",
+        "clubbadge": "clubs/arsenal.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/rice.jpeg"
+    },
+    {
+        "name": "Eduardo Camavinga",
+        "price": "90.00m",
+        "position": "CM",
+        "clubbadge": "clubs/real_madrid.jpeg",
+        "countryflag": "flags/france.jpeg",
+        "playerpic": "players/camavinga.jpeg"
+    },
+    {
+        "name": "Bruno Guimaraes",
+        "price": "85.00m",
+        "position": "CDM",
+        "clubbadge": "clubs/newcastle.jpeg",
+        "countryflag": "flags/brazil.jpeg",
+        "playerpic": "players/guimaraes.jpeg"
+    },
+    {
+        "name": "Harry Kane",
+        "price": "110.00m",
+        "position": "ST",
+        "clubbadge": "clubs/bayern.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/kane.jpeg"
+    },
+    {
+        "name": "Rodri",
+        "price": "110.00m",
+        "position": "CDM",
+        "clubbadge": "clubs/mancity.jpeg",
+        "countryflag": "flags/spain.jpeg",
+        "playerpic": "players/rodri.jpeg"
+    },
+    {
+        "name": "Jamal Musiala",
+        "price": "110.00m",
+        "position": "CAM",
+        "clubbadge": "clubs/bayern.jpeg",
+        "countryflag": "flags/germany.jpeg",
+        "playerpic": "players/musiala.jpeg"
+    },
+    {
+        "name": "Diogo Costa",
+        "price": "45.00m",
+        "position": "GK",
+        "clubbadge": "clubs/porto.jpeg",
+        "countryflag": "flags/portugal.jpeg",
+        "playerpic": "players/diogocosta.jpeg"
+    },
+    {
+        "name": "Ederson",
+        "price": "40.00m",
+        "position": "GK",
+        "clubbadge": "clubs/mancity.jpeg",
+        "countryflag": "flags/brazil.jpeg",
+        "playerpic": "players/ederson.jpeg"
+    },
+    {
+        "name": "Alphonso Davies",
+        "price": "70.00m",
+        "position": "LB",
+        "clubbadge": "clubs/bayern.jpeg",
+        "countryflag": "flags/canada.jpeg",
+        "playerpic": "players/davies.jpeg"
+    },
+    {
+        "name": "Ronald Araujo",
+        "price": "70.00m",
+        "position": "CB",
+        "clubbadge": "clubs/barcelona.jpeg",
+        "countryflag": "flags/uruguay.jpeg",
+        "playerpic": "players/araujo.jpeg"
+    },
+    {
+        "name": "Dominik Szoboszlai",
+        "price": "75.00m",
+        "position": "CAM",
+        "clubbadge": "clubs/liverpool.jpeg",
+        "countryflag": "flags/hungary.jpeg",
+        "playerpic": "players/szoboszlai.jpeg"
+    },
+    {
+        "name": "Joshua Kimmich",
+        "price": "75.00m",
+        "position": "CDM",
+        "clubbadge": "clubs/bayern.jpeg",
+        "countryflag": "flags/germany.jpeg",
+        "playerpic": "players/kimmich.jpeg"
+    },
+    {
+        "name": "Luis Diaz",
+        "price": "75.00m",
+        "position": "LW",
+        "clubbadge": "clubs/liverpool.jpeg",
+        "countryflag": "flags/colombia.jpeg",
+        "playerpic": "players/diaz.jpeg"
+    },
+    {
+        "name": "Ruben Dias",
+        "price": "80.00m",
+        "position": "CB",
+        "clubbadge": "clubs/mancity.jpeg",
+        "countryflag": "flags/portugal.jpeg",
+        "playerpic": "players/dias.jpeg"
+    },
+    {
+        "name": "William Saliba",
+        "price": "80.00m",
+        "position": "CB",
+        "clubbadge": "clubs/arsenal.jpeg",
+        "countryflag": "flags/france.jpeg",
+        "playerpic": "players/saliba.jpeg"
+    },
+    {
+        "name": "Enzo Fernandez",
+        "price": "80.00m",
+        "position": "CM",
+        "clubbadge": "clubs/chelsea.jpeg",
+        "countryflag": "flags/argentina.jpeg",
+        "playerpic": "players/fernandez.jpeg"
+    },
+    {
+        "name": "Jack Grealish",
+        "price": "65.00m",
+        "position": "LW",
+        "clubbadge": "clubs/mancity.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/grealish.jpeg"
+    },
+    {
+        "name": "Dusan Vlahovic",
+        "price": "65.00m",
+        "position": "ST",
+        "clubbadge": "clubs/juventus.jpeg",
+        "countryflag": "flags/serbia.jpeg",
+        "playerpic": "players/vlahovic.jpeg"
+    },
+    {
+        "name": "Mohamed Salah",
+        "price": "65.00m",
+        "position": "RW",
+        "clubbadge": "clubs/liverpool.jpeg",
+        "countryflag": "flags/egypt.jpeg",
+        "playerpic": "players/salah.jpeg"
+    },
+    {
+        "name": "Matthijs de Ligt",
+        "price": "65.00m",
+        "position": "CB",
+        "clubbadge": "clubs/bayern.jpeg",
+        "countryflag": "flags/netherlands.jpeg",
+        "playerpic": "players/deligt.jpeg"
+    },
+    {
+        "name": "Lamine Yamal",
+        "price": "60.00m",
+        "position": "RW",
+        "clubbadge": "clubs/barcelona.jpeg",
+        "countryflag": "flags/spain.jpeg",
+        "playerpic": "players/yamal.jpeg"
+    },
+    {
+        "name": "Nuno Mendes",
+        "price": "60.00m",
+        "position": "LB",
+        "clubbadge": "clubs/psg.jpeg",
+        "countryflag": "flags/portugal.jpeg",
+        "playerpic": "players/mendes.jpeg"
+    },
+    {
+        "name": "Min-jae Kim",
+        "price": "60.00m",
+        "position": "CB",
+        "clubbadge": "clubs/bayern.jpeg",
+        "countryflag": "flags/korea.jpeg",
+        "playerpic": "players/kim.jpeg"
+    },
+    {
+        "name": "Ben White",
+        "price": "55.00m",
+        "position": "RB",
+        "clubbadge": "clubs/arsenal.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/white.jpeg"
+    },
+    {
+        "name": "Reece James",
+        "price": "50.00m",
+        "position": "RB",
+        "clubbadge": "clubs/chelsea.jpeg",
+        "countryflag": "flags/england.jpeg",
+        "playerpic": "players/james.jpeg"
+    },
+    {
+        "name": "Adrien Rabiot",
+        "price": "40.00m",
+        "position": "CM",
+        "clubbadge": "clubs/juventus.jpeg",
+        "countryflag": "flags/france.jpeg",
+        "playerpic": "players/rabiot.jpeg"
+    },
+    {
+        "name": "Joelinton",
+        "price": "42.00m",
+        "position": "CM",
+        "clubbadge": "clubs/newcastle.jpeg",
+        "countryflag": "flags/brazil.jpeg",
+        "playerpic": "players/joelinton.jpeg"
+    }
+]
