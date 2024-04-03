@@ -264,6 +264,7 @@ function App() {
           <button onClick={() => handleReset()}>Reset</button>
         </div>
       </div>
+      <div class="column-flex">
       <div class="player-card-container">
         {filteredData.map((item, index) => (
           <div class="player-card">
@@ -301,6 +302,7 @@ function App() {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }
