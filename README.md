@@ -1,5 +1,5 @@
 # Link to Deployed React App:
-[Link:](https://development-orpin.vercel.app/)
+[Transfer Market](https://development-orpin.vercel.app/)
 
 # Instructions on How to Locally Run the Application:
 1. First, make sure that you install all necessary dependencies by running `npm install` in the root project directory.
