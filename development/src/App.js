@@ -197,8 +197,8 @@ function App() {
   return (
     <div className="App">
       <div class="instructions-container">
-        <h1>Transfer Market</h1>
-        <h2>
+        <h1>Transfer Market ⚽</h1>
+        <h2 className="add-players-slogan">
           Add players to your team by selecting them from the market shown
           below
         </h2>
@@ -208,7 +208,7 @@ function App() {
       <div class="filter-sort-reset-container">
         <div class="filter-position-container">
           <label aria-label="filter-by-position">
-            <p>Filter by Position:</p>
+            <p className="filter-title">Filter by Position:</p>
             <select
               value={selectedPosition || ""}
               onChange={(e) => handlePositionChange(e.target.value)}
@@ -229,7 +229,7 @@ function App() {
         </div>
         <div class="filter-club-container">
           <label aria-label="filter-by-club">
-            <p>Filter by Club:</p>
+            <p className="filter-title">Filter by Club:</p>
             <select
               value={selectedClub || ""}
               onChange={(e) => handleClubChange(e.target.value)}
@@ -249,7 +249,7 @@ function App() {
         </div>
         <div class="sort-container">
           <label aria-label="sorting feature">
-            <p>Sort By:</p>
+            <p className="filter-title">Sort By:</p>
             <select
               value={sortState || ""}
               onChange={(e) => handleSort(e.target.value)}
@@ -279,9 +279,9 @@ function App() {
         ))}
       </div>
       <div class="squad-container">
-        <h2>My Squad</h2>
+        <h2>My Squad ⚡️</h2>
         <div>
-          <p>
+          <p className="filter-title">
             <b>Total Price (in €): </b> {totalPrice}
             <br></br>
             <br></br>
