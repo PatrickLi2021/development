@@ -73,18 +73,19 @@ p {
 }
 
 .reset-button-container button {
+    display: inline-block;
     background-color: rgb(255, 255, 225);
     border-radius: 10px;
     width: 250%;
     height: 80%;
-    font-size: 14px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .reset-button-container {
     margin-left: 4%;
     margin-top: 2%;
-    display: flex;
-    justify-content: center;
 }
 
 h1,

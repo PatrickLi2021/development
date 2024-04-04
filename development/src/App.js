@@ -112,21 +112,51 @@ function App() {
         )
       );
     }
+    if (sortState === "ASC") {
+      setFilteredData(
+        playerData.filter(
+          (item) =>
+            !playersBought.includes(item) &&
+            item.position.toUpperCase() === selectedPosition.toUpperCase() &&
+            item.clubbadge.substring(6, item.clubbadge.length - 5) === selectedClub
+        )
+      );
+      setFilteredData(filteredData.toSorted(
+        (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
+      ));
+    }
+    else {
+      setFilteredData(
+        playerData.filter(
+          (item) =>
+            !playersBought.includes(item) &&
+            item.position.toUpperCase() === selectedPosition.toUpperCase() &&
+            item.clubbadge.substring(6, item.clubbadge.length - 5) === selectedClub
+        )
+      );
+      setFilteredData(filteredData.toSorted(
+        (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
+      ));
+    }
   };
 
   useEffect(() => {
     let filteredDataCopy;
+    console.log("HIII");
     if (selectedClub === "All" && selectedPosition === "All") {
+      console.log("in here 2111");
       filteredDataCopy = playerData.filter(
         (item) => !playersBought.includes(item.name)
       );
     } else if (selectedClub === "All") {
+      console.log("in here 222");
       filteredDataCopy = playerData.filter(
         (item) =>
           !playersBought.includes(item.name) &&
           item.position.toUpperCase() === selectedPosition.toUpperCase()
       );
     } else if (selectedPosition === "All") {
+      console.log("in here 212");
       filteredDataCopy = playerData.filter(
         (item) =>
           !playersBought.includes(item.name) &&
@@ -134,6 +164,7 @@ function App() {
             selectedClub
       );
     } else {
+      console.log("in here 23");
       filteredDataCopy = playerData.filter(
         (item) =>
           !playersBought.includes(item.name) &&
@@ -142,8 +173,20 @@ function App() {
           item.position.toUpperCase() === selectedPosition.toUpperCase()
       );
     }
+    if (sortState === "ASC") {
+      console.log("in here");
+      filteredDataCopy = filteredDataCopy.toSorted(
+        (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
+      );
+    }
+    else if (sortState === "DESC") {
+      console.log("in here 1");
+      filteredDataCopy = filteredDataCopy.toSorted(
+        (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
+      );
+    }
     setFilteredData(filteredDataCopy);
-  }, [selectedClub, selectedPosition]);
+  }, [selectedClub, selectedPosition, sortState]);
 
   const addItem = (item, price, name) => {
     const numericStr = price.replace(/[^0-9]/g, "");
@@ -261,7 +304,7 @@ function App() {
           </label>
         </div>
         <div class="reset-button-container">
-          <button aria-label="reset button" onClick={() => handleReset()}>Reset</button>
+          <button classname="reset-button" aria-label="reset filters and sort button" onClick={() => handleReset()}>Reset</button>
         </div>
       </div>
       <div class="column-flex">
