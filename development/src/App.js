@@ -28,11 +28,10 @@ function App() {
   };
 
   const handleReset = () => {
-    setFilteredData(originalItems);
+    setFilteredData(originalItems.filter((item) => !playersBought.includes(item)));
     setSelectedPosition("All");
     setSelectedClub("All");
     setSortState("None");
-    setTotalPrice("0");
   };
 
   const handleSort = (sortValue) => {
@@ -185,7 +184,7 @@ function App() {
       );
     }
     setFilteredData(filteredDataCopy);
-  }, [selectedClub, selectedPosition, sortState]);
+  }, [selectedClub, selectedPosition]);
 
   const addItem = (item, price, name) => {
     const numericStr = price.replace(/[^0-9]/g, "");
