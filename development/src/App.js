@@ -32,7 +32,6 @@ function App() {
     setSelectedPosition("All");
     setSelectedClub("All");
     setSortState("None");
-    setPlayersBought([]);
     setTotalPrice("0");
   };
 
