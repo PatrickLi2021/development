@@ -3,11 +3,9 @@ import { useState, useEffect } from "react";
 import playerData from "./assets/player-data.json";
 import PlayerItem from "./components/PlayerItem";
 
-/* ####### DO NOT TOUCH -- this makes the image URLs work ####### */
 playerData.forEach((item) => {
   item.image = process.env.PUBLIC_URL + "/" + item.image;
 });
-/* ############################################################## */
 
 function App() {
   const [totalPrice, setTotalPrice] = useState("0");
@@ -35,24 +33,50 @@ function App() {
   };
 
   const handleSort = (sortValue) => {
+    let filteredDataCopy;
     if (sortValue === "ASC") {
       setSortState(sortValue);
-      setFilteredData(
-        filteredData.toSorted(
+      filteredDataCopy = filteredData.toSorted(
           (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
-        )
       );
     } else if (sortValue === "DESC") {
       setSortState(sortValue);
-      setFilteredData(
-        filteredData.toSorted(
+      filteredDataCopy = filteredData.toSorted(
           (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
-        )
       );
-    } else if (sortValue === "None") {
+    } 
+    else if (sortValue === "None") {
       setSortState("None");
-      setFilteredData(originalItems);
+      if (selectedClub !== "All" && selectedPosition !== "All") {
+        filteredDataCopy = originalItems.filter(
+          (item) =>
+            item.position.toUpperCase() === selectedPosition.toUpperCase() &&
+            !playersBought.includes(item) &&
+            item.clubbadge.substring(6, item.clubbadge.length - 5) ===
+              selectedClub
+        );
+      }
+      else if (selectedClub !== "All") {
+        filteredDataCopy = originalItems.filter(
+          (item) => !playersBought.includes(item) &&
+            item.clubbadge.substring(6, item.clubbadge.length - 5) ===
+              selectedClub
+        );
+      }
+      else if (selectedPosition !== "All") {
+        filteredDataCopy = originalItems.filter(
+          (item) =>
+            item.position.toUpperCase() === selectedPosition.toUpperCase() &&
+            !playersBought.includes(item)
+        );
+      }
+      else {
+        filteredDataCopy = originalItems.filter(
+          (item) => !playersBought.includes(item)
+        );
+      }
     }
+    setFilteredData(filteredDataCopy);
   };
 
   const convertPriceToNum = (price) => {
@@ -77,108 +101,110 @@ function App() {
     if (index !== -1) {
       playersBought.splice(index, 1);
     }
+    let filteredDataCopy;
     setPlayersBought(playersBought);
     if (selectedPosition === "All" && selectedClub === "All") {
-      setFilteredData(
-        playerData.filter((item) => !playersBought.includes(item))
-      );
+      filteredDataCopy = originalItems.filter((item) => !playersBought.includes(item));
+      if (sortState === "ASC") {
+        filteredDataCopy = filteredDataCopy.toSorted(
+          (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
+        );
+      }
+      else if (sortState === "DESC") {
+        filteredDataCopy = filteredDataCopy.toSorted(
+          (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
+        );
+      }
+
     } else if (selectedPosition === "All") {
-      setFilteredData(
-        playerData.filter(
+      filteredDataCopy = originalItems.filter(
           (item) =>
             !playersBought.includes(item) &&
             item.clubbadge.substring(6, item.clubbadge.length - 5) ===
               selectedClub
-        )
-      );
+        );
+        if (sortState === "ASC") {
+          filteredDataCopy = filteredDataCopy.toSorted(
+            (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
+          );
+        }
+        else if (sortState === "DESC") {
+          filteredDataCopy = filteredDataCopy.toSorted(
+            (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
+          );
+        }
     } else if (selectedClub === "All") {
-      setFilteredData(
-        playerData.filter(
+      filteredDataCopy = originalItems.filter(
           (item) =>
             !playersBought.includes(item) &&
             item.position.toUpperCase() === selectedPosition.toUpperCase()
-        )
-      );
+        );
+        if (sortState === "ASC") {
+          filteredDataCopy = filteredDataCopy.toSorted(
+            (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
+          );
+        }
+        else if (sortState === "DESC") {
+          filteredDataCopy = filteredDataCopy.toSorted(
+            (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
+          );
+        }
     } else {
-      setFilteredData(
-        playerData.filter(
+      filteredDataCopy = originalItems.filter(
           (item) =>
             !playersBought.includes(item) &&
             item.position.toUpperCase() === selectedPosition.toUpperCase() &&
             item.clubbadge.substring(6, item.clubbadge.length - 5) ===
               selectedClub
-        )
-      );
+        );
+        if (sortState === "ASC") {
+          filteredDataCopy = filteredDataCopy.toSorted(
+            (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
+          );
+        }
+        else if (sortState === "DESC") {
+          filteredDataCopy = filteredDataCopy.toSorted(
+            (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
+          );
+        }
     }
-    if (sortState === "ASC") {
-      setFilteredData(
-        playerData.filter(
-          (item) =>
-            !playersBought.includes(item) &&
-            item.position.toUpperCase() === selectedPosition.toUpperCase() &&
-            item.clubbadge.substring(6, item.clubbadge.length - 5) === selectedClub
-        )
-      );
-      setFilteredData(filteredData.toSorted(
-        (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
-      ));
-    }
-    else {
-      setFilteredData(
-        playerData.filter(
-          (item) =>
-            !playersBought.includes(item) &&
-            item.position.toUpperCase() === selectedPosition.toUpperCase() &&
-            item.clubbadge.substring(6, item.clubbadge.length - 5) === selectedClub
-        )
-      );
-      setFilteredData(filteredData.toSorted(
-        (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
-      ));
-    }
+    setFilteredData(filteredDataCopy);
   };
 
   useEffect(() => {
     let filteredDataCopy;
-    console.log("HIII");
     if (selectedClub === "All" && selectedPosition === "All") {
-      console.log("in here 2111");
       filteredDataCopy = playerData.filter(
-        (item) => !playersBought.includes(item.name)
+        (item) => !playersBought.includes(item)
       );
     } else if (selectedClub === "All") {
-      console.log("in here 222");
       filteredDataCopy = playerData.filter(
         (item) =>
-          !playersBought.includes(item.name) &&
+          !playersBought.includes(item) &&
           item.position.toUpperCase() === selectedPosition.toUpperCase()
       );
     } else if (selectedPosition === "All") {
-      console.log("in here 212");
-      filteredDataCopy = playerData.filter(
+      filteredDataCopy = originalItems.filter(
         (item) =>
-          !playersBought.includes(item.name) &&
+          !playersBought.includes(item) &&
           item.clubbadge.substring(6, item.clubbadge.length - 5) ===
             selectedClub
       );
     } else {
-      console.log("in here 23");
       filteredDataCopy = playerData.filter(
         (item) =>
-          !playersBought.includes(item.name) &&
+          !playersBought.includes(item) &&
           item.clubbadge.substring(6, item.clubbadge.length - 5) ===
             selectedClub &&
           item.position.toUpperCase() === selectedPosition.toUpperCase()
       );
     }
     if (sortState === "ASC") {
-      console.log("in here");
       filteredDataCopy = filteredDataCopy.toSorted(
         (a, b) => convertPriceToNum(a.price) - convertPriceToNum(b.price)
       );
     }
     else if (sortState === "DESC") {
-      console.log("in here 1");
       filteredDataCopy = filteredDataCopy.toSorted(
         (a, b) => convertPriceToNum(b.price) - convertPriceToNum(a.price)
       );
@@ -285,6 +311,7 @@ function App() {
               <option value="bayern">Bayern Munich</option>
               <option value="juventus">Juventus</option>
               <option value="newcastle">Newcastle</option>
+              <option value="chelsea">Chelsea</option>
             </select>
           </label>
         </div>
