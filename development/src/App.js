@@ -200,14 +200,14 @@ function App() {
         <h1>Transfer Market</h1>
         <h2>
           Add players to your team by selecting them from the market shown
-          below:
+          below
         </h2>
 
         <h3>Players Available in the Market</h3>
       </div>
       <div class="filter-sort-reset-container">
         <div class="filter-position-container">
-          <label>
+          <label aria-label="filter-by-position">
             <p>Filter by Position:</p>
             <select
               value={selectedPosition || ""}
@@ -228,7 +228,7 @@ function App() {
           </label>
         </div>
         <div class="filter-club-container">
-          <label>
+          <label aria-label="filter-by-club">
             <p>Filter by Club:</p>
             <select
               value={selectedClub || ""}
@@ -248,7 +248,7 @@ function App() {
           </label>
         </div>
         <div class="sort-container">
-          <label>
+          <label aria-label="sorting feature">
             <p>Sort By:</p>
             <select
               value={sortState || ""}
@@ -261,7 +261,7 @@ function App() {
           </label>
         </div>
         <div class="reset-button-container">
-          <button onClick={() => handleReset()}>Reset</button>
+          <button aria-label="reset button" onClick={() => handleReset()}>Reset</button>
         </div>
       </div>
       <div class="column-flex">

@@ -23,9 +23,9 @@ export default function playerItem(props) {
         </div>
       </div>
       {inCart ? (
-        <button onClick={clickHandler}>Remove</button>
+        <button aria-label="remove button" onClick={clickHandler}>Remove</button>
       ) : (
-        <button onClick={clickHandler}>Add</button>
+        <button aria-label="add button" onClick={clickHandler}>Add</button>
       )}
     </div>
   );
